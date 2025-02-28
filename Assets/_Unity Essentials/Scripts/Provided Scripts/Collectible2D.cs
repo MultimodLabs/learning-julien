@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Collectible2D : MonoBehaviour
 {
@@ -23,9 +24,10 @@ public class Collectible2D : MonoBehaviour
             
             // Destroy the collectible
             Destroy(gameObject);
-
+            
             // Instantiate the particle effect
             Instantiate(onCollectEffect, transform.position, transform.rotation);
+            // SceneManager.LoadScene("5_scene_2");
         }
 
         
